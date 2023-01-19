@@ -14,13 +14,13 @@ group :development do
 end
 
 group :test do
-  gem 'activesupport'
+  gem 'activesupport', '>= 7.0.4.1'
   gem 'codecov', require: false
   gem 'i18n'
   gem 'minitest'
   gem 'minitest-reporters'
   gem 'oj', require: false     # false is for testing with or without it
-  gem 'rack'
+  gem 'rack', '>= 2.2.6.2'
   gem 'rake-manifest'
   gem 'rematch'
   gem 'rubocop'
