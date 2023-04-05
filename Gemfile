@@ -14,13 +14,13 @@ group :development do
 end
 
 group :test do
-  gem 'activesupport'
+  gem 'activesupport', '>= 7.0.4.3'
   gem 'codecov', require: false
   gem 'i18n'
   gem 'minitest'
   gem 'minitest-reporters'
   gem 'oj', require: false     # false is for testing with or without it
-  gem 'rack'
+  gem 'rack', '>= 3.0.0'
   gem 'rake-manifest'
   gem 'rematch'
   gem 'rubocop'
@@ -32,10 +32,10 @@ group :test do
 end
 
 group :apps do
-  gem 'puma'
+  gem 'puma', '>= 5.6.4'
   gem 'rerun'
-  gem 'sinatra'
-  gem 'sinatra-contrib'
+  gem 'sinatra', '>= 2.2.3'
+  gem 'sinatra-contrib', '>= 2.2.3'
   # gem 'slim'
   # gem 'haml'
 end
