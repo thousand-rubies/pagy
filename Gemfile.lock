@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.2.2)
+    activesupport (7.0.7.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -14,7 +14,7 @@ GEM
     builder (3.2.4)
     codecov (0.6.0)
       simplecov (>= 0.15, < 0.22)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.2.2)
     debase (0.2.5.beta2)
       debase-ruby_core_source (>= 0.10.12)
     debase-ruby_core_source (0.10.14)
@@ -22,7 +22,7 @@ GEM
     docile (1.4.0)
     e2mmap (0.1.0)
     ffi (1.15.5)
-    i18n (1.10.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
     kalibera (0.1.2)
@@ -37,7 +37,8 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     memoist (0.16.2)
     memory_profiler (1.0.0)
-    minitest (5.15.0)
+    mini_portile2 (2.8.4)
+    minitest (5.19.0)
     minitest-reporters (1.5.0)
       ansi
       builder
@@ -47,6 +48,9 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
+    nokogiri (1.13.3)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.13.3-x86_64-linux)
       racc (~> 1.4)
     oj (3.13.11)
@@ -131,7 +135,7 @@ GEM
       yard (~> 0.9, >= 0.9.24)
     thor (1.2.1)
     tilt (2.0.10)
-    tzinfo (2.0.4)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
     webrick (1.7.0)
@@ -139,10 +143,11 @@ GEM
       webrick (~> 1.7.0)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
-  activesupport
+  activesupport (>= 7.0.7.1)
   benchmark-ips
   codecov
   debase (~> 0.2.5.beta)

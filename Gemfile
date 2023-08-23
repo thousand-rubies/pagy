@@ -14,7 +14,7 @@ group :development do
 end
 
 group :test do
-  gem 'activesupport'
+  gem 'activesupport', '>= 7.0.7.1'
   gem 'codecov', require: false
   gem 'i18n'
   gem 'minitest'
