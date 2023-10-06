@@ -37,6 +37,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     memoist (0.16.2)
     memory_profiler (1.0.0)
+    mini_portile2 (2.8.4)
     minitest (5.15.0)
     minitest-reporters (1.5.0)
       ansi
@@ -44,9 +45,12 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.15.0)
-    mustermann (1.1.1)
+    mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
+    nokogiri (1.13.3)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.13.3-x86_64-linux)
       racc (~> 1.4)
     oj (3.13.11)
@@ -56,9 +60,9 @@ GEM
     puma (5.6.2)
       nio4r (~> 2.0)
     racc (1.6.0)
-    rack (2.2.3)
-    rack-protection (2.2.0)
-      rack
+    rack (2.2.8)
+    rack-protection (3.1.0)
+      rack (~> 2.2, >= 2.2.4)
     rainbow (3.1.1)
     rake (13.0.6)
     rake-manifest (0.2.2)
@@ -103,16 +107,16 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
-    sinatra (2.2.0)
-      mustermann (~> 1.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.0)
+    sinatra (3.1.0)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.1.0)
       tilt (~> 2.0)
-    sinatra-contrib (2.2.0)
+    sinatra-contrib (3.1.0)
       multi_json
-      mustermann (~> 1.0)
-      rack-protection (= 2.2.0)
-      sinatra (= 2.2.0)
+      mustermann (~> 3.0)
+      rack-protection (= 3.1.0)
+      sinatra (= 3.1.0)
       tilt (~> 2.0)
     solargraph (0.44.3)
       backport (~> 1.2)
@@ -130,7 +134,7 @@ GEM
       tilt (~> 2.0)
       yard (~> 0.9, >= 0.9.24)
     thor (1.2.1)
-    tilt (2.0.10)
+    tilt (2.3.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
@@ -139,6 +143,7 @@ GEM
       webrick (~> 1.7.0)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
@@ -166,7 +171,7 @@ DEPENDENCIES
   ruby-debug-ide
   simplecov
   sinatra
-  sinatra-contrib
+  sinatra-contrib (>= 2.2.1)
   solargraph
 
 BUNDLED WITH
