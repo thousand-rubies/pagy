@@ -34,8 +34,8 @@ end
 group :apps do
   gem 'puma'
   gem 'rerun'
-  gem 'sinatra'
-  gem 'sinatra-contrib'
+  gem 'sinatra', '>= 4.0.0'
+  gem 'sinatra-contrib', '>= 4.0.0'
   # gem 'slim'
   # gem 'haml'
 end
