@@ -10,7 +10,7 @@ gem 'rake'
 group :development do
   gem 'debase', '~> 0.2.5.beta'  # companion of ruby-debug-ide
   gem 'ruby-debug-ide'           # companion of debase
-  gem 'solargraph'               # run the Solargraph rebuild command in VSC
+  gem 'solargraph'               , '>= 0.45.0' # run the Solargraph rebuild command in VSC
 end
 
 group :test do
@@ -23,10 +23,10 @@ group :test do
   gem 'rack'
   gem 'rake-manifest'
   gem 'rematch'
-  gem 'rubocop'
-  gem 'rubocop-minitest'
-  gem 'rubocop-packaging'
-  gem 'rubocop-performance'
+  gem 'rubocop', '>= 1.26.0'
+  gem 'rubocop-minitest', '>= 0.18.0'
+  gem 'rubocop-packaging', '>= 0.5.2'
+  gem 'rubocop-performance', '>= 1.13.3'
   gem 'rubocop-rake'
   gem 'simplecov', require: false
 end
