@@ -32,7 +32,7 @@ group :test do
 end
 
 group :apps do
-  gem 'puma'
+  gem 'puma', '>= 5.6.9'
   gem 'rerun'
   gem 'sinatra'
   gem 'sinatra-contrib'
