@@ -23,7 +23,7 @@ group :test do
   gem 'rack'
   gem 'rake-manifest'
   gem 'rematch'
-  gem 'rubocop'
+  gem 'rubocop', '>= 1.66.0'
   gem 'rubocop-minitest'
   gem 'rubocop-packaging'
   gem 'rubocop-performance'
