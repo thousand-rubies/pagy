@@ -20,14 +20,14 @@ group :test do
   gem 'minitest'
   gem 'minitest-reporters'
   gem 'oj', require: false     # false is for testing with or without it
-  gem 'rack'
+  gem 'rack', '>= 2.2.11'
   gem 'rake-manifest'
   gem 'rematch'
   gem 'rubocop'
-  gem 'rubocop-minitest'
+  gem 'rubocop-minitest', '>= 0.37.1'
   gem 'rubocop-packaging'
-  gem 'rubocop-performance'
-  gem 'rubocop-rake'
+  gem 'rubocop-performance', '>= 1.24.0'
+  gem 'rubocop-rake', '>= 0.7.0'
   gem 'simplecov', require: false
 end
 
