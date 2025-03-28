@@ -25,7 +25,7 @@ group :test do
   gem 'rematch'
   gem 'rubocop'
   gem 'rubocop-minitest'
-  gem 'rubocop-packaging'
+  gem 'rubocop-packaging', '>= 0.6.0'
   gem 'rubocop-performance'
   gem 'rubocop-rake'
   gem 'simplecov', require: false
