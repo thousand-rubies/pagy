@@ -10,7 +10,7 @@ gem 'rake'
 group :development do
   gem 'debase', '~> 0.2.5.beta'  # companion of ruby-debug-ide
   gem 'ruby-debug-ide'           # companion of debase
-  gem 'solargraph'               # run the Solargraph rebuild command in VSC
+  gem 'solargraph'               , '>= 0.45.0' # run the Solargraph rebuild command in VSC
 end
 
 group :test do
@@ -34,8 +34,8 @@ end
 group :apps do
   gem 'puma'
   gem 'rerun'
-  gem 'sinatra'
-  gem 'sinatra-contrib'
+  gem 'sinatra', '>= 2.2.1'
+  gem 'sinatra-contrib', '>= 2.2.1'
   # gem 'slim'
   # gem 'haml'
 end
