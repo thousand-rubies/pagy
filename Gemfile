@@ -10,7 +10,7 @@ gem 'rake'
 group :development do
   gem 'debase', '~> 0.2.5.beta'  # companion of ruby-debug-ide
   gem 'ruby-debug-ide'           # companion of debase
-  gem 'solargraph'               # run the Solargraph rebuild command in VSC
+  gem 'solargraph'               , '>= 0.45.0' # run the Solargraph rebuild command in VSC
 end
 
 group :test do
@@ -20,22 +20,22 @@ group :test do
   gem 'minitest'
   gem 'minitest-reporters'
   gem 'oj', require: false     # false is for testing with or without it
-  gem 'rack'
+  gem 'rack', '>= 2.2.18'
   gem 'rake-manifest'
   gem 'rematch'
-  gem 'rubocop'
-  gem 'rubocop-minitest'
-  gem 'rubocop-packaging'
-  gem 'rubocop-performance'
-  gem 'rubocop-rake'
+  gem 'rubocop', '>= 1.66.0'
+  gem 'rubocop-minitest', '>= 0.18.0'
+  gem 'rubocop-packaging', '>= 0.5.2'
+  gem 'rubocop-performance', '>= 1.13.3'
+  gem 'rubocop-rake', '>= 0.7.0'
   gem 'simplecov', require: false
 end
 
 group :apps do
   gem 'puma'
   gem 'rerun'
-  gem 'sinatra'
-  gem 'sinatra-contrib'
+  gem 'sinatra', '>= 2.2.1'
+  gem 'sinatra-contrib', '>= 2.2.1'
   # gem 'slim'
   # gem 'haml'
 end
