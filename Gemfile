@@ -20,7 +20,7 @@ group :test do
   gem 'minitest'
   gem 'minitest-reporters'
   gem 'oj', require: false     # false is for testing with or without it
-  gem 'rack'
+  gem 'rack', '>= 2.2.19'
   gem 'rake-manifest'
   gem 'rematch'
   gem 'rubocop'
@@ -34,8 +34,8 @@ end
 group :apps do
   gem 'puma'
   gem 'rerun'
-  gem 'sinatra'
-  gem 'sinatra-contrib'
+  gem 'sinatra', '>= 2.2.1'
+  gem 'sinatra-contrib', '>= 2.2.1'
   # gem 'slim'
   # gem 'haml'
 end
