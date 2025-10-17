@@ -9,6 +9,7 @@ GEM
     ansi (1.5.0)
     ast (2.4.2)
     backport (1.2.0)
+    base64 (0.3.0)
     benchmark (0.2.0)
     benchmark-ips (2.10.0)
     builder (3.2.4)
@@ -35,6 +36,7 @@ GEM
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
     memoist (0.16.2)
     memory_profiler (1.0.0)
     minitest (5.15.0)
@@ -43,8 +45,8 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    multi_json (1.15.0)
-    mustermann (1.1.1)
+    multi_json (1.17.0)
+    mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
     nokogiri (1.13.3-x86_64-linux)
@@ -56,9 +58,14 @@ GEM
     puma (5.6.2)
       nio4r (~> 2.0)
     racc (1.6.0)
-    rack (2.2.3)
-    rack-protection (2.2.0)
-      rack
+    rack (3.2.3)
+    rack-protection (4.2.1)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
     rainbow (3.1.1)
     rake (13.0.6)
     rake-manifest (0.2.2)
@@ -103,16 +110,18 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
-    sinatra (2.2.0)
-      mustermann (~> 1.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.0)
+    sinatra (4.2.1)
+      logger (>= 1.6.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.2.1)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    sinatra-contrib (2.2.0)
-      multi_json
-      mustermann (~> 1.0)
-      rack-protection (= 2.2.0)
-      sinatra (= 2.2.0)
+    sinatra-contrib (4.2.1)
+      multi_json (>= 0.0.2)
+      mustermann (~> 3.0)
+      rack-protection (= 4.2.1)
+      sinatra (= 4.2.1)
       tilt (~> 2.0)
     solargraph (0.44.3)
       backport (~> 1.2)
@@ -130,7 +139,7 @@ GEM
       tilt (~> 2.0)
       yard (~> 0.9, >= 0.9.24)
     thor (1.2.1)
-    tilt (2.0.10)
+    tilt (2.6.1)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
@@ -153,7 +162,7 @@ DEPENDENCIES
   minitest-reporters
   oj
   puma
-  rack
+  rack (>= 2.2.20)
   rake
   rake-manifest
   rematch
@@ -165,9 +174,9 @@ DEPENDENCIES
   rubocop-rake
   ruby-debug-ide
   simplecov
-  sinatra
-  sinatra-contrib
+  sinatra (>= 4.2.0)
+  sinatra-contrib (>= 4.2.0)
   solargraph
 
 BUNDLED WITH
-   2.3.7
+   2.3.27
